@@ -1,0 +1,141 @@
+$branco: #fff;
+$cinza-background: #F1F4F5;
+$cinza-escuro: #ccc;
+$font-padrao: #605e86;
+$font-alternativa: #5F5F78;
+$roxo-padrao: #5A5297;
+$roxo-alternativo: #6962A0;
+$roxo-alternativo-btn: #8078B6;
+$roxo-escuro: #423C6C;
+$roxo-footer: #5c568c;
+$verde-padrao: #63C5B9;
+$verde-escuro: #3FA99C;
+$amarelo-padrao: #F1C40F;
+$amarelo-escuro: #B08F0B;
+$vermelho-padrao: #F64747;
+$vermelho-escuro: #F42424;
+
+body.bd-login{
+  background: $roxo-padrao none repeat scroll 0 0;
+
+  .content-login{
+    margin-top: 40px;
+
+    .grid {
+      height: 100%;
+
+      .column {
+        max-width: 450px;
+      }
+
+    }
+
+    .ui.header > .image, .ui.header > img{
+      width: 14.5em;
+    }
+
+  }
+
+  i.icon, i.icons {
+    font-size: 1em;
+  }
+
+}
+
+
+body {
+    background: #f4f4f4 none repeat scroll 0 0;
+}
+
+.ui.inverted.menu{
+  height: 70px;
+  background: $roxo-padrao none repeat scroll 0 0;
+
+}
+
+.header .logo {
+    width: 240px !important;
+}
+
+.ui.main.text.container {
+    margin-top: 68px;
+}
+i.icon, i.icons {
+    font-size: 2em;
+}
+.ui.inverted.menu .item::before, .ui.vertical.inverted.menu .item::before{
+  background: none;
+}
+.ui.menu:not(.secondary):not(.text):not(.tabular):not(.borderless) > .container > .item:first-child:not(.right):not(.borderless){
+  border: none;
+}
+
+.ui.link.list .item, .ui.link.list .item a:not(.ui), .ui.link.list a.item{
+  color: rgba(0, 0, 0, 0.4) !important;
+}
+
+.plus.square.outline.icon.bt-add-item {
+    cursor: pointer;
+    font-size: 45px;
+    margin-right: -7px;
+    margin-top: 6px;
+}
+
+.off, .ajax-file-upload-filename, .ajax-file-upload-red{
+  display: none !important;
+
+}
+
+.show-detail {
+  font-size: 14px;
+  font-weight: normal;
+
+  span {
+    float: right;
+    font-size: 12px;
+    margin-top: -7px;
+
+  }
+
+}
+
+.info-detail-box{
+
+  float: left;
+  cursor: pointer
+
+}
+
+.item, .item-detail, .item-remove, .show-detail i{
+  cursor: pointer;
+}
+
+.brandTemp, .typeTemp {
+    float: initial !important;
+    font-size: 14px !important;
+}
+
+.ui.small.image.info-image {
+    float: left;
+    margin-right: 10px;
+}
+
+
+#map_delivery{
+  width: 100%;
+  height: 300px;
+}
+
+.checkbox.terms-ok {
+    float: left;
+}
+
+.label-termos{
+
+  font-size: 12px !important;
+
+  span{
+    color: blue;
+    cursor: pointer;
+  }
+}

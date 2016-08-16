@@ -1,0 +1,9 @@
+{
+	"description": "Lavamos Nos Aplication",
+	"name": "lavamosnos/framework",
+	"type": "project",
+	"homepage": "https://lavamosnos.co",
+	"require": {
+        "doctrine/orm": "*"
+    }
+}

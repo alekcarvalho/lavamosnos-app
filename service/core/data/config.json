@@ -1,0 +1,14 @@
+{
+	"notification":{
+		"email" : {
+			"charset"	:	"UTF-8",
+			"host"		:	"mail.lavamosnos.co",
+			"port"		:	587,
+			"secure"	:	"TLS",
+			"user"		:	"contato@lavamosnos.co",
+			"pass"		:	"L4v4m053M41l!",
+			"from-mail"	:	"contato@lavamosnos.co",
+			"from-name"	:	"Lavamos Nós"
+		}
+	}
+}

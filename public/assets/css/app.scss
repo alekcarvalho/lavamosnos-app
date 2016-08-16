@@ -1,0 +1,1167 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,900,700italic,900italic);
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+.ir {
+  background-color: transparent;
+  border: 0;
+  overflow: hidden;
+  *text-indent: -9999px;
+}
+.ir:before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 150%;
+}
+.hidden {
+  display: none !important;
+  visibility: hidden;
+}
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+.invisible {
+  visibility: hidden;
+}
+.clearfix:after,
+.clearfix:before {
+  content: " ";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+.clearfix {
+  *zoom: 1;
+}
+.text-centered {
+  text-align: center;
+}
+.col-centered {
+  float: none;
+  margin: 0 auto;
+}
+.avatar-image {
+  width: 42px;
+  height: 42px;
+  border-radius: 24px;
+  margin-right: 5px;
+}
+.box {
+  position: relative;
+  background: #fff;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.15);
+}
+.mdl-menu__container {
+  right: 2px!important;
+}
+.bold {
+  font-weight: bold;
+}
+.center-coluna{
+  width: 100%;
+  text-align: center;
+}
+.tar{
+  text-align: right!important;
+}
+/* ==========================================================================
+   Cores e variaveis
+   ========================================================================== */
+$branco: #fff;
+$cinza-background: #F1F4F5;
+$cinza-escuro: #ccc;
+$font-padrao: #4e4c7d;
+$font-alternativa: #5F5F78;
+$font-padrao-escura: #3E3C62;
+$roxo-padrao: #524A97;
+$roxo-alternativo: #6962A0;
+$roxo-alternativo-btn: #8078B6;
+$roxo-escuro: #3a346f;
+$roxo-footer: #5c568c;
+$verde-padrao: #63C5B9;
+$verde-escuro: #3FA99C;
+$amarelo-padrao: #F1C40F;
+$amarelo-escuro: #B08F0B;
+$vermelho-padrao: #F64747;
+$vermelho-escuro: #F42424;
+$opacity-btn: 0.85;
+$font-family: 'Roboto', sans-serif;
+$width-logo: 280px;
+/* ==========================================================================
+   Mixins
+   ========================================================================== */
+@mixin btn-padrao {
+  width: 320px;
+  padding: 20px 0;
+  border-radius: 4px;
+  color: $branco;
+  text-align: center;
+  font-size: 17px;
+  border: none!important;
+}
+@mixin btn-padrao-small {
+  width: 320px;
+  padding: 5px 0;
+  border-radius: 4px;
+  color: $branco;
+  text-align: center;
+  font-size: 17px;
+  border: none!important;
+}
+@mixin btn-padrao-big {
+  width: 450px;
+  padding: 27px 0;
+  border-radius: 4px;
+  color: $branco;
+  text-align: center;
+  font-size: 19px;
+  border: none;
+}
+/* ==========================================================================
+   Formatação classes
+   ========================================================================== */
+h1 {
+  font-size: 40px;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: $font-family!important;
+  width: 100%;
+  float: left;
+}
+h2 {
+  font-size: 30px;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: $font-family!important;
+  width: 100%;
+  float: left;
+}
+p {
+  font-size: 15px;
+  width: 100%;
+  float: left;
+}
+span {
+  width: 100%;
+  float: left;
+}
+.btn-padrao-roxo {
+  @include btn-padrao;
+  background-color: $roxo-padrao;
+  box-shadow: 0 5px $roxo-escuro;
+  &:hover {
+    opacity: $opacity-btn;
+  }
+}
+.btn-padrao-amarelo {
+  @include btn-padrao;
+  background-color: $amarelo-padrao;
+  box-shadow: 0 5px $amarelo-escuro;
+  &:hover {
+    opacity: $opacity-btn;
+  }
+}
+.btn-padrao-vermelho {
+  @include btn-padrao;
+  background-color: $vermelho-padrao;
+  box-shadow: 0 5px $vermelho-escuro;
+  &:hover {
+    opacity: $opacity-btn;
+  }
+}
+.btn-padrao-verde {
+  @include btn-padrao;
+  background-color: $verde-padrao;
+  box-shadow: 0 5px $verde-escuro;
+  &:hover {
+    opacity: $opacity-btn;
+  }
+}
+.btn-padrao-roxo-small {
+  @include btn-padrao-small;
+  background-color: $roxo-padrao;
+  box-shadow: 0 5px $roxo-escuro;
+  &:hover {
+    opacity: $opacity-btn;
+  }
+}
+.btn-padrao-verde-small {
+  @include btn-padrao-small;
+  background-color: $verde-padrao;
+  box-shadow: 0 5px $verde-escuro;
+  &:hover {
+    opacity: $opacity-btn;
+  }
+}
+.btn-padrao-amarelo-small {
+  @include btn-padrao-small;
+  background-color: $amarelo-padrao;
+  box-shadow: 0 5px $amarelo-escuro;
+  &:hover {
+    opacity: $opacity-btn;
+  }
+}
+.btn-padrao-vermelho-small {
+  @include btn-padrao-small;
+  background-color: $vermelho-padrao;
+  box-shadow: 0 5px $vermelho-escuro;
+  &:hover {
+    opacity: $opacity-btn;
+  }
+}
+.btn-padrao-verde-big {
+  @include btn-padrao-big;
+  background-color: $verde-padrao;
+  box-shadow: 0 5px $verde-escuro;
+  &:hover {
+    opacity: $opacity-btn;
+  }
+}
+.btn-padrao-vermelho-big {
+  @include btn-padrao-big;
+  background-color: $vermelho-padrao;
+  box-shadow: 0 5px $vermelho-escuro;
+  &:hover {
+    opacity: $opacity-btn;
+  }
+}
+/* ==========================================================================
+   GERAL
+   ========================================================================== */
+   html{
+     width: 100%;
+     height: 100%;
+   }
+body {
+  font-family: $font-family!important;
+  font-size: 16px!important;
+  overflow-x: hidden;
+  color: $font-padrao;
+  background: $cinza-background!important;
+  width: 100%;
+  height: 100%;
+  -webkit-font-smoothing: antialiased;
+
+}
+body.pushable {
+    background: none!important;
+}
+body.pushable>.pusher {
+  background: $cinza-background!important;
+}
+body.dimmed.dimmable {
+   overflow:auto!important;
+}
+.ui.menu{
+font-family: $font-family!important;
+.item{
+  font-family: $font-family!important;
+}
+}
+/* ==========================================================================
+      HEADER
+      ========================================================================== */
+header {
+  width: 100%;
+  height: 85px;
+  background-color: $roxo-padrao;
+  .logo {
+    text-align: center;
+    position: relative;
+    img {
+      width: $width-logo;
+      margin-top: 9px;
+      text-align: center;
+      margin-left: -50px;
+    }
+  }
+  i.sidebar {
+    color: $branco;
+    font-size: 25px!important;
+    float: left;
+    position: relative;
+    top: 30px;
+    cursor: pointer;
+    z-index: 999;
+  }
+  .hidden.menu {
+    display: none;
+  }
+  .secondary.pointing.menu .toc.item {
+    display: block;
+  }
+}
+.usuario-dropdown {
+  position: relative;
+  float: right;
+  top: -52px;
+  z-index: 999;
+  img {
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    float: left;
+    position: relative;
+    top: -8px;
+    left: -8px;
+  }
+  a {
+    float: left;
+    position: relative;
+    color: $branco;
+  }
+  i {
+    float: right;
+    position: relative;
+    top: 5px;
+    left: -5px;
+    font-size: 15px!important;
+  }
+}
+.avatar-sidebar {
+  float: left;
+  width: 100%;
+  padding: 20px;
+  background-color: $roxo-escuro;
+  img {
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+  }
+}
+.ui.inverted.menu {
+  background-color: $roxo-footer!important;
+  height: 100%!important;
+}
+.ui.sidebar.menu .item {
+  // text-transform: uppercase!important;
+  font-size: 15px!important;
+}
+.ui.modal{
+  .header{
+    color: $font-alternativa!important;
+    font-family: $font-family!important;
+  }
+  .content{
+    color: $font-alternativa!important;
+    font-family: $font-family!important;
+  }
+}
+/* ==========================================================================
+      CONTENT
+      ========================================================================== */
+#conteudo {
+  width: 100%;
+  height: 100%;
+  min-height:700px;
+  float: left;
+  margin-top: 30px !important;
+  h1.titulo-h1 {
+  }
+  .sub-titulo {
+    margin-bottom: 50px;
+  }
+  h2.titulo-h2 {
+    margin-top: 100px !important;
+    margin-bottom: -55px;
+  }
+  label{
+    width: 100%;
+    text-align: center;
+    color: $font-padrao;
+    font-size: 15px;
+    margin-bottom: 20px;
+  }
+  .field{
+margin-bottom:40px;
+  }
+  button#submit{
+    border: none;
+    text-transform: uppercase;
+  }
+  .field-submit{
+    text-align: center;
+  }
+  input[type="text"], input[type="tel"], input[type="email"], input[type="password"]{
+    height: 50px;
+  }
+  input[type="text"], input[type="select"], input[type="tel"], input[type="email"], input[type="password"], textarea, .text{
+        font-family: $font-family!important;
+        font-size: 16px;
+  }
+
+input[type="text"], input[type="select"], input[type="tel"], input[type="email"], input[type="password"], textarea{
+color: $font-padrao-escura;
+}
+.ui.default.dropdown>.text, .ui.dropdown:hover>.default.text, .ui.dropdown>.default.text {
+    color: hsla(0,0%,70%,.9)!important;
+}
+.ui.selection.dropdown{
+  color: $font-padrao-escura!important;
+}
+  form{
+    margin-bottom: 30px;
+  }
+  .ui.form .field>.selection.dropdown {
+    height: 50px; line-height: 25px;
+    i{
+      line-height: 25px;
+    }
+    ul{
+      list-style: none;
+    }
+}
+  /* ==========================================================================
+        APP - Home
+        ========================================================================== */
+  #app-home{
+    width: 100%;
+    float: left;
+    .bg-fazer-pedido{
+      width: 100%;
+      float: left;
+      padding: 50px 0;
+      background: #e5e5e5;
+      margin-top: -25px;
+      margin-bottom: -30px;
+    }
+  .links-rapidos {
+    width: 100%;
+    float: left;
+    .links-rapidos-content{
+      width: 100%;
+      float: left;
+    .ui.segment {
+      background: $roxo-padrao;
+      padding: 40px 0 50px 0;
+      margin-left: 10px;
+      margin-bottom: 40px;
+      box-shadow: 0 5px $roxo-escuro;
+      color: $branco;
+      text-align: center;
+      &:hover {
+        opacity: $opacity-btn;
+      }
+      i {
+        font-size: 50px;
+        margin-bottom: -5px;
+      }
+    }
+  }
+  }
+  }
+  /* ==========================================================================
+        APP - Faça seu pedido
+        ========================================================================== */
+        #app-pedido{
+          width: 100%;
+          float: left;
+          input[type="text"]{
+            text-align: center;
+          }
+          .pedido-pecas{
+            background: $roxo-padrao;
+            box-shadow: 0 5px $roxo-escuro;
+            border-radius: 4px;
+            padding: 40px;
+            label{
+              color: $branco;
+            }
+            input{
+              border-radius: 0px;
+            }
+          }
+          .pedido-endereco{
+            padding: 40px 0;
+            border-top: 1px solid #DADADA;
+            border-bottom: 1px solid #DADADA;
+            text-align: center;
+            input{
+              margin-bottom: 20px;
+            }
+            a{
+              cursor: pointer;
+            }
+            .btn-alterar-endereco{
+background: $roxo-alternativo-btn;
+color: $branco;
+border: none;
+border-radius: 4px;
+text-align: center;
+padding: 15px 70px;
+&:hover{
+  opacity: $opacity-btn;
+}
+            }
+          }
+        .input-stepper {
+          display: flex;
+          width: 100%;
+          .input-pecas {
+            border-left: 0;
+            border-right: 0;
+            width: 100%;
+            text-align: center;
+          }
+        .button-form {
+          cursor: pointer;
+          padding: 5px 15px;
+          color: #FFFFFF;
+          background-color: #63C5B9;
+          border: none;
+          font-size: 12px;
+          border-radius: 4px;
+        }
+        .button--addOnLeft {
+          border-top-right-radius: 0;
+          border-bottom-right-radius: 0;
+          font-weight: bold;
+          font-size: 15px;
+        }
+        .button--addOnRight {
+          border-top-left-radius: 0;
+          border-bottom-left-radius: 0;
+          font-weight: bold;
+          font-size: 15px;
+        }
+        }
+      }
+      /* ==========================================================================
+            APP - Cadastro Cartão
+            ========================================================================== */
+            #app-cadastro-cartao{
+              width: 100%;
+              float: left;
+              label{
+                text-align: left;
+                margin-bottom: 5px;
+              }
+              .cadastro-cartao-mes{
+                margin-right: -7px;
+              }
+              .cadastro-cartao-cvc{
+                margin-top: -27px;
+                margin-left: 10px;
+              }
+              input[type="text"]{
+                text-align: left;
+              }
+              .nao-entendi{
+                text-align: center;
+                margin-top:-40px;
+                margin-bottom: 40px;
+                float: left;
+                width: 100%;
+                p{
+                  font-size: 17px;
+                  text-decoration: underline;
+                  cursor: pointer;
+                  width: 100%;
+                  float: left;
+
+                  a{
+                    color: $roxo-padrao;
+                    &:hover {
+                    opacity: $opacity-btn;
+                    }
+                  }
+                span {
+                  -webkit-box-sizing: border-box;
+                  -moz-box-sizing: border-box;
+                  box-sizing: border-box;
+                  position: absolute;
+                  width: 30px;
+                  height: 30px;
+                  text-align: center;
+                  background: $roxo-padrao;
+                  border-radius: 50%;
+                  cursor: pointer;
+                  color: #fff;
+                  -webkit-transition: all 0.3s ease-in-out;
+                  -moz-transition: all 0.3s ease-in-out;
+                  -ms-transition: all 0.3s ease-in-out;
+                  -o-transition: all 0.3s ease-in-out;
+                  transition: all 0.3s ease-in-out;
+                  margin-left: -35px;
+                  margin-top: -2px;
+                }
+                i{
+position: relative;
+top: 10%;
+left: 5%;
+                }
+                }
+              }
+            }
+            /* ==========================================================================
+                  APP - Confirmacao Pedido
+                  ========================================================================== */
+                  #app-confirmacao-pedido{
+                    width: 100%;
+                    float: left;
+                    p{
+                      font-weight: bold;
+                      font-size: 20px;
+                      margin-bottom: 70px;
+                    }
+                  }
+                  /* ==========================================================================
+                        APP - Meus Pedidos
+                        ========================================================================== */
+                        #app-meus-pedidos{
+                          width: 100%;
+                          float: left;
+                          .ui.segment{
+                            width: 100%;
+                            float: left;
+                            padding: 0;
+                            margin: 0;
+                          }
+                          .first{
+                            border: 2px solid!important;
+                          }
+                          span.labeled{
+                           width: 100%;
+                           background: $roxo-escuro;
+                           color: #fff;
+                           text-align: center;
+                           padding: 10px 0;
+                           text-transform: uppercase;
+                          }
+                          .meus-pedidos-grid{
+                            width: 100%;
+                            float: left;
+                            .segment-header{
+                              width: 100%;
+                              float: left;
+                              padding: 55px 0;
+                              background: $roxo-padrao;
+                              text-align: center;
+                              color: $branco;
+                              font-size: 20px;
+                              i{
+                                text-align: center;
+                              width: 100%;
+                              margin-bottom: 15px;
+                              font-size: 28px;
+                              }
+                            }
+                            .segment-content{
+                              padding: 0;
+                              margin: 0;
+                              ul{
+                                width: 100%;
+                                float: left;
+                                padding: 0 15px;
+
+                                li{
+                                  width: 100%;
+                                  display: inline;
+                                  float: left;
+                                  margin-bottom: 10px;
+                                  span{
+                                    float: left;
+                                    width: auto;
+                                    margin-right: 5px;
+                                  }
+                                }
+                              }
+                            }
+                          }
+           .meus-pedidos-pagination{
+                           width: 100%;
+                           float: left;
+                           margin-top: 40px;
+                           text-align: center;
+                         }
+                        }
+                        /* ==========================================================================
+                              APP - Perguntas Frequentes
+                              ========================================================================== */
+                              #app-perguntas-frequentes{
+                                width: 100%;
+                                float: left;
+                                .ui.accordion{
+                                  width: 100%;
+                                  float: left;
+                                }
+                                .title{
+                                  width: 100%;
+                                  float: left;
+                                  background: $roxo-padrao;
+                                  padding: 20px 0;
+                                  color: $branco;
+                                  margin-bottom: 10px;
+                                  padding-left: 10px;
+                                  i{
+                                    color: $verde-padrao;
+                                  }
+                                }
+                                .content{
+                                  width: 100%;
+                                  float: left;
+                                  background: $branco;
+                                  margin-top: -10px;
+                                  padding: 20px;
+                                  box-shadow: 0 1px 2px 0 rgba(34,36,38,.15);
+                                }
+                              }
+                              /* ==========================================================================
+                                    APP - Tabela de Preços
+                                    ========================================================================== */
+                                    #app-tabela-precos{
+                                      width: 100%;
+                                      float: left;
+                                      padding-bottom: 30px;
+                              .ui.inverted.violet.table {
+                          background-color: #524A97!important;
+                          color: #fff!important;
+                          th, td{
+                            padding-right: 40px!important;
+                            padding-left: 40px!important;
+                          }
+                          th{
+                            font-size: 18px;
+                          }
+                          .preco{
+
+                          }
+                        }
+                      }
+                      /* ==========================================================================
+                            APP - Minha Conta
+                            ========================================================================== */
+                            #app-minha-conta{
+                              width: 100%;
+                              float: left;
+                              input[type="text"]{
+                                text-align: left;
+                              }
+                              .box-form-upload{
+                                width: 100%;
+                                float: left;
+                                background: #e5e5e5;
+                                padding: 20px 20px 0 20px;
+                                label{
+                                  text-align: center;
+                                  margin-bottom: 20px;
+                                }
+                              }
+                              .inputfile {
+                                  display: none;
+                              }
+                              .inputfile + label.upload {
+                                  max-width: 100%;
+                                  font-size: 17px;
+                                  text-overflow: ellipsis;
+                                  white-space: nowrap;
+                                  cursor: pointer;
+                                  display: inline-block;
+                                  overflow: hidden;
+                                  padding: 10px 20px;
+                              }
+
+                              .inputfile-1 + label.upload {
+                                  color: $branco;
+                                  background-color: $vermelho-padrao;
+                                  border-radius: 4px;
+                                  &:hover{
+                                    opacity: $opacity-btn;
+                                  }
+                              }
+                              .field{
+                                margin-bottom: 20px!important;
+                              }
+                          label{
+                            text-align: left;
+                            margin-bottom: 10px;
+                          }
+                          .field-submit{
+                            margin-top: 50px;
+                          }
+                          .menu-tabs{
+                              border: none!important;
+                              margin-bottom: 40px;
+                              width: 100%!important;
+                              margin-left: 18px;
+                            .item{
+                              border: none!important;
+                              font-size: 18px;
+                              background: #e5e5e5;
+                              color: $roxo-padrao;
+                              border-radius: 0!important;
+                              width: 47%;
+                              text-align: center!important;
+                              padding: 20px!important;
+                            }
+                            .item.active{
+                              background: $roxo-padrao;
+                              color: $branco;
+                            }
+                          }
+                          .ui.segment{
+                            background: none!important;
+                            border: none!important;
+                          }
+                            }
+                            /* ==========================================================================
+                                  APP - Meus cartões
+                                  ========================================================================== */
+                                  #app-meus-cartoes{
+                                    width: 100%;
+                                    float: left;
+                                    .ui.segment.cartao {
+                                      background-image: linear-gradient(135deg, $roxo-padrao, #8276e9 50%, $roxo-padrao);
+                                      padding: 40px 0 30px 0;
+                                      margin-left: 10px;
+                                      margin-bottom: 40px;
+                                      color: $branco;
+                                      text-align: center;
+                                      &:hover {
+                                        opacity: $opacity-btn;
+                                      }
+                                      p{
+                                        font-size: 20px;
+                                      }
+                                      i {
+                                        font-size: 40px;
+                                        margin-bottom: -5px;
+                                      }
+                                    }
+                                    .ui.segment.add-cartao {
+                                      background: #e5e5e5;
+                                      padding: 52px 0 66px 0;
+                                      margin-left: 10px;
+                                      margin-bottom: 40px;
+                                      color: $font-padrao;
+                                      text-align: center;
+                                      &:hover {
+                                        opacity: $opacity-btn;
+                                      }
+                                      p{
+                                        font-size: 20px;
+                                      }
+                                      i {
+                                        font-size: 40px;
+                                        margin-bottom: -5px;
+                                      }
+                                    }
+                                  }
+                                  /* ==========================================================================
+                                        APP - Meus cartões add/edit
+                                        ========================================================================== */
+                                        #app-meus-cartoes-add{
+                                          width: 100%;
+                                          float: left;
+                                          label{
+                                            text-align: left;
+                                            margin-bottom: 5px;
+                                          }
+                                          .cadastro-cartao-mes{
+                                            margin-right: -7px;
+                                          }
+                                          .cadastro-cartao-cvc{
+                                            margin-top: -27px;
+                                            margin-left: 10px;
+                                          }
+                                          input[type="text"]{
+                                            text-align: left;
+                                          }
+                                          .field-submit{
+                                            margin-top: -20px;
+                                          }
+                                          .remover-cartao{
+                                            width: 100%;
+                                            text-align: center;
+                                            margin-top: 30px;
+                                            a{
+                                              color: $vermelho-padrao;
+                                              text-decoration: underline;
+                                              font-size: 16px;
+                                            }
+                                          }
+                                        }
+}
+/* ==========================================================================
+      FOOTER
+      ========================================================================== */
+footer {
+  width: 100%;
+  background-color: $roxo-footer;
+  padding: 40px 0;
+  float: left;
+  margin-top: 50px;
+  .logo-footer {
+    width: 100%;
+    img {
+      width: 260px;
+    }
+  }
+  .menu-footer {
+    width: 100%;
+    position: relative;
+    top: 15px;
+    left: 40px;
+  }
+  ul.social {
+    width: 100%;
+    list-style: none;
+    float: left;
+    margin: 0;
+    padding: 0;
+    li {
+      display: inline;
+      width: 20px;
+      margin: 0 25px;
+      a {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        position: absolute;
+        width: 45px;
+        height: 45px;
+        text-align: center;
+        background: rgba(255,255,255,0.15);
+        border-radius: 50%;
+        cursor: pointer;
+        color: #fff;
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        -ms-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+          background: rgba(255,255,255,1);
+          color: #262760;
+        }
+      }
+      i {
+        font-size: 22px;
+        position: relative;
+        top: 25%;
+        margin-left: 4px;
+      }
+    }
+  }
+  .copyright{
+    text-align: center;
+        color: rgba(255,255,255,.8);
+    width: 100%;
+  }
+}
+.ui.modal>.content {
+float: left;
+width: 100%;
+}
+/* ==========================================================================
+   RESPONSIVE
+   ========================================================================== */
+/* Responsive: Portrait tablets and up */
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+  footer .logo-footer img{
+width: 240px;
+  }
+  footer ul.social li{
+    margin: 0 19px;
+  }
+  footer ul.social li a{
+    width: 36px;
+    height: 36px;
+  }
+  footer ul.social li i{
+    font-size: 20px;
+    top: 25%;
+  }
+  .copyright p{
+    margin-top: 10px;
+    font-size: 13px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .usuario-dropdown {
+    display: none;
+  }
+  footer .menu-footer {
+  left: 0px;
+  top: 0;
+  }
+  .copyright{
+    margin-top: 50px;
+  }
+  footer ul.social{
+    margin-top: 10px;
+  }
+  header .logo img{
+    margin-left: 0;
+  }
+  .cadastro-cartao-ano{
+    margin-top: -25px!important;
+  }
+  .cadastro-cartao-cvc{
+    margin-top: 0px!important;
+    margin-left: 0!important;
+  }
+  #app-meus-pedidos, #app-tabela-precos, #app-minha-conta{
+    padding-bottom: 30px;
+  }
+
+}
+@media screen and (max-width: 500px) {
+  #conteudo .links-rapidos{
+    display: none;
+  }
+header .logo img{
+  width: 240px;
+  margin-top: 15px;
+}
+footer .logo-footer img{
+width: 240px;
+}
+.btn-padrao-verde-big, .btn-padrao-verde{
+  width: 200px;
+}
+footer{
+  display: none;
+}
+h1 {
+  font-size: 36px;
+}
+h2 {
+  font-size: 26px;
+}
+}
+@media screen and (max-width: 800px) {
+  footer{
+    display: none;
+  }
+}
+@media only screen and (max-width: 991px) and (min-width: 768px){
+.ui.doubling.grid {
+    width: 100%!important;
+}
+}
+@media screen and (max-width: 420px) {
+
+}
+/* ==========================================================================
+     CHIMP FORM
+     ========================================================================== */
+#mc_embed_signup {
+  background: none!important;
+}
+#main h1 {
+  text-transform: uppercase;
+  width: 100%;
+  font-size: 95px;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  font-weight: 400 !important;
+  text-align: center;
+}
+#main p {
+  width: 100%;
+  text-align: center;
+}
+#main i {
+  width: 100%;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+.mc-field-group {
+  margin-top: 30px;
+}
+#mc_embed_signup {
+  margin-top: 50px;
+}
+#mc_embed_signup input {
+  border: 5px solid rgba(255,255,255,0.2);
+  border-radius: 4px;
+  box-shadow: none;
+  height: 50px;
+  outline: medium none;
+  padding: 10px 15px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  width: 80%;
+  color: #F8F8F8;
+  background: none;
+  margin-bottom: 5px;
+  color: #fff;
+}
+#mc_embed_signup input[type="submit"] {
+  background: #5BC3B8!important;
+  border: none!important;
+  margin-bottom: 10px;
+}
+#mc_embed_signup input[type="submit"]:hover {
+  background: #524A97!important;
+}
+#mc_embed_signup div.mce_inline_error {
+  background-color: #e03a4e!important;
+}
+#mc_embed_signup input.mce_inline_error {
+  border-color: #e03a4e!important;
+}
+
+/* ==========================================================================
+     Place Holder
+     ========================================================================== */
+::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #666!important;
+}
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #666!important;
+}
+:-ms-input-placeholder {
+  /* IE 10+ */
+  color: #666!important;
+}
+:-moz-placeholder {
+  /* Firefox 18- */
+  color: #666!important;
+}
+
+/* ==========================================================================
+     Scroll Bar
+     ========================================================================== */
+     ::-webkit-scrollbar-track
+     {
+     	background-color: #F5F5F5;
+     }
+
+     ::-webkit-scrollbar
+     {
+     	width: 12px;
+     	background-color: #F5F5F5;
+     }
+
+    ::-webkit-scrollbar-thumb
+     {
+     	background-color: rgba(0, 0, 0, 0.2);
+     }
